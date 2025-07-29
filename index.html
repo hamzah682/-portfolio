@@ -9,42 +9,56 @@
   <header>
     <h1>Hamza Shahid</h1>
     <p>Android Developer | Kotlin | Java | Firebase | REST APIs</p>
-    <a href="resume.pdf" download>📄 Download Resume</a>
+    <a href="resume.pdf" download>ðŸ“„ Download Resume</a>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Experienced Android Developer with a background in engineering, passionate about building modern, user-friendly mobile apps.</p>
+  <section id="projects">
+    <h2>My Android Apps</h2>
+    <div class="project-grid">
+      <div class="project-card" onclick="showModal('musicshare')">
+        <img src="apps/apps/musicshare_logo.png" alt="MusicShare Logo">
+        <h3>MusicShare</h3>
+        <p>Real-time music sharing app with call & sync features.</p>
+      </div>
+      <div class="project-card" onclick="showModal('videosaver')">
+        <img src="apps/apps/videosaver_logo.png" alt="VideoSaver Logo">
+        <h3>VideoSaver</h3>
+        <p>Video downloader with multi-source background downloads.</p>
+      </div>
+    </div>
   </section>
 
-<section id="projects">
-  <h2>My Android Apps</h2>
-  <div class="project-grid">
-    <div class="project-card">
-      <img src="apps/apps/musicshare_1.png" alt="MusicShare">
-      <h3>MusicShare</h3>
-      <p>Real-time music sharing app with call & sync play features.</p>
-      <a href="apps/apps/musicshare.apk" download class="apk-button">Download APK</a>
+  <div class="modal" id="modal-musicshare">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('musicshare')">&times;</span>
+      <h2>MusicShare</h2>
+      <p>A real-time music sharing platform where users can listen together while chatting or calling.</p>
+      <img src="apps/apps/musicshare_1.png" alt="MusicShare Screenshot">
+      <img src="apps/apps/musicshare_2.png" alt="MusicShare Screenshot">
+      <br>
+      <a href="apps/apps/musicshare.apk" download class="apk-button">ðŸ“¥ Download APK</a>
     </div>
-    <div class="project-card">
-      <img src="apps/apps/videosaver_1.png" alt="VideoSaver">
-      <h3>VideoSaver</h3>
-      <p>Video downloader with multi-source and background downloads.</p>
-      <a href="apps/apps/videosaver.apk" download class="apk-button">Download APK</a>
-    </div>
-    <!-- Add more cards here -->
   </div>
-</section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:applyforhamza@gmail.com">applyforhamza@gmail.com</a></p>
-    <p>Phone: +92 3456575495</p>
-    <p>Location: Gujranwala Cantt, Pakistan</p>
-  </section>
+  <div class="modal" id="modal-videosaver">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('videosaver')">&times;</span>
+      <h2>VideoSaver</h2>
+      <p>Download videos from multiple sources with ease, supporting background downloads and file management.</p>
+      <img src="apps/apps/videosaver_1.png" alt="VideoSaver Screenshot">
+      <img src="apps/apps/videosaver_2.png" alt="VideoSaver Screenshot">
+      <br>
+      <a href="apps/apps/videosaver.apk" download class="apk-button">ðŸ“¥ Download APK</a>
+    </div>
+  </div>
 
-  <footer>
-    <p>© 2025 Hamza Shahid. Built with ❤ for Android.</p>
-  </footer>
+  <script>
+    function showModal(id) {
+      document.getElementById('modal-' + id).style.display = 'block';
+    }
+    function closeModal(id) {
+      document.getElementById('modal-' + id).style.display = 'none';
+    }
+  </script>
 </body>
 </html>
