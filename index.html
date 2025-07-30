@@ -5,6 +5,10 @@
   <title>Hamza Shahid | Android Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <div id="lightbox" onclick="closeLightbox()">
+  <span>&times;</span>
+  <img id="lightbox-img" src="" alt="Fullscreen Screenshot">
+</div>
 <body>
   <header>
     <h1>Hamza Shahid</h1>
@@ -69,12 +73,10 @@
       <span class="close" onclick="closeModal('musicshare')">&times;</span>
       <h2>SyncBeat</h2>
       <p>A real-time music sharing platform where users can listen together while chatting or calling.</p>
-      <div class="screenshots">
-   <a href="apps/Screenshot_20220418_063800_com.shahids.onesignalcheck.jpg" target="_blank">
-  <img src="apps/Screenshot_20220418_063800_com.shahids.onesignalcheck.jpg" alt="Screenshot">
-</a>
-    <img src="apps/Screenshot_20220418_063838_com.shahids.onesignalcheck.jpg" alt="MusicShare Screenshot">
-  </div>
+  <div class="screenshots">
+  <img src="apps/Screenshot_20220418_063800_com.shahids.onesignalcheck.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+  <img src="apps/Screenshot_20220418_063838_com.shahids.onesignalcheck.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+</div>
       <br>
       <a href="apps/apps/musicshare.apk" download class="apk-button">Download APK</a>
     </div>
@@ -92,13 +94,23 @@
     </div>
   </div>
 
-  <script>
-    function showModal(id) {
-      document.getElementById('modal-' + id).style.display = 'block';
-    }
-    function closeModal(id) {
-      document.getElementById('modal-' + id).style.display = 'none';
-    }
-  </script>
+<script>
+  function showModal(id) {
+    document.getElementById('modal-' + id).style.display = 'block';
+  }
+
+  function closeModal(id) {
+    document.getElementById('modal-' + id).style.display = 'none';
+  }
+
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
 </body>
 </html>
