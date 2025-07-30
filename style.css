@@ -88,22 +88,33 @@ header a {
 }
 .screenshots {
   display: flex;
-  flex-wrap: wrap;
+  overflow-x: auto;
   gap: 10px;
-  justify-content: center;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
 }
 
 .screenshots img {
+  flex: 0 0 auto;
   width: 150px;
   height: auto;
   border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  scroll-snap-align: center;
   transition: transform 0.2s ease;
 }
 
 .screenshots img:hover {
   transform: scale(1.05);
+}
+.screenshots::-webkit-scrollbar {
+  height: 8px;
+}
+
+.screenshots::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 4px;
 }
 /* Lightbox overlay */
 #lightbox {
