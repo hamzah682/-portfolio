@@ -124,6 +124,20 @@
   function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
   }
+
+    function showModal(id) {
+    const modal = document.getElementById('modal-' + id);
+    if (modal) {
+      modal.style.display = 'block';
+    }
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById('modal-' + id);
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
 </script>
 
 </body>
