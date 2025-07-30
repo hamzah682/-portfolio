@@ -86,12 +86,76 @@ header a {
 .apk-button:hover {
   background: #005fa3;
 }
+.screenshot-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.scroll-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.2s ease;
+}
+
+.scroll-btn:hover {
+  background-color: #0056b3;
+}
+
+.scroll-btn.left {
+  margin-right: 10px;
+}
+
+.scroll-btn.right {
+  margin-left: 10px;
+}
+
+.screenshot-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.scroll-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.2s ease;
+}
+
+.scroll-btn:hover {
+  background-color: #0056b3;
+}
+
+.scroll-btn.left {
+  margin-right: 10px;
+}
+
+.scroll-btn.right {
+  margin-left: 10px;
+}
+
 .screenshots {
   display: flex;
   overflow-x: auto;
   gap: 10px;
   padding: 10px 0;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  flex: 1;
 }
 
 .screenshots img {
@@ -107,14 +171,6 @@ header a {
 
 .screenshots img:hover {
   transform: scale(1.05);
-}
-.screenshots::-webkit-scrollbar {
-  height: 8px;
-}
-
-.screenshots::-webkit-scrollbar-thumb {
-  background: #aaa;
-  border-radius: 4px;
 }
 /* Lightbox overlay */
 #lightbox {
