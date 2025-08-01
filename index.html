@@ -181,6 +181,36 @@
     </div>
   </div>
 
+
+      <div class="modal" id="modal-socialapp">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('socialapp')">&times;</span>
+      <h2>Social App</h2>
+      <p>Download videos from multiple sources with ease, supporting background downloads and file management.</p>
+   <div class="screenshot-wrapper">
+  <button class="scroll-btn left" onclick="scrollScreenshots('left', this)">&#8592;</button>
+     
+<div class="screenshots">
+<img src="apps/socialapp1.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp2.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp3.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp4.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp5.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp6.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp7.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp8.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+<img src="apps/socialapp9.jpg" alt="Screenshot" onclick="openLightbox(this.src)">
+  
+</div>
+          <button class="scroll-btn right" onclick="scrollScreenshots('right', this)">&#8594;</button>
+     </div>
+      <br>
+      <a href="apps/apps/videosaver.apk" download class="apk-button">Download APK</a>
+    </div>
+  </div>
+
+
+  
 <script>
   function scrollScreenshots(direction, button) {
     const container = button.parentElement.querySelector('.screenshots');
