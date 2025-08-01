@@ -34,6 +34,17 @@ header a {
   cursor: pointer;
   transition: transform 0.2s;
 }
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-card h3,
+.project-card p {
+  margin: 0;
+  color: inherit;
+}
 .project-card:hover {
   transform: scale(1.03);
 }
